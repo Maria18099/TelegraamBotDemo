@@ -103,18 +103,7 @@ namespace TelegraamBotDemo
                 }
                 if (callbackQuery.Data == "Convert_button_click")
                 {
-                    await botClient.SendTextMessageAsync(callbackQuery.Message.Chat.Id, "Enter sum:");
-                    return;
-                    InlineKeyboardMarkup inlineKeyboard = new InlineKeyboardMarkup(new[]
-                    {
-                        new[]
-                        {
-                            InlineKeyboardButton.WithCallbackData("EUR", "EUR_Convert_button_click"),
-                            InlineKeyboardButton.WithCallbackData("USD", "USD_Convert_button_click"),
-                            InlineKeyboardButton.WithCallbackData("GBP", "GBP_Convert_button_click")
-                        }
-                    });
-                    await botClient.SendTextMessageAsync(callbackQuery.Message.Chat.Id, "Choose currency:", replyMarkup: inlineKeyboard);
+                    await botClient.SendTextMessageAsync(callbackQuery.Message.Chat.Id, "Choose currency:");
                     return;
                 }
                 if (callbackQuery.Data == "Convert_button_click")
