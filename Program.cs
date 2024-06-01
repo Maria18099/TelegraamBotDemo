@@ -81,6 +81,7 @@ namespace TelegraamBotDemo
                     });
                     await botClient.SendTextMessageAsync(update.Message.Chat, "Welcome to our bot! Choose operation:", replyMarkup: inlineKeyboard);
                     return;
+
                 }
                 await botClient.SendTextMessageAsync(message.Chat, "Hi! How can I help you?");
             }
